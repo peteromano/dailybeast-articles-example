@@ -2,6 +2,9 @@
   "name": "dailybeast-articles-example",
   "private": true,
   "version": "1.0.0-pre.1",
+  "dependencies": {
+    "express": "~4.9.5"
+  },
   "devDependencies": {
     "matchdep": "~0.3.0",
     "grunt": "~0.4.5",
