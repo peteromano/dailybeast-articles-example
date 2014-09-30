@@ -1,0 +1,13 @@
+{
+  "grunt": {
+    "tasks": {
+      "build": [
+        "copy",
+        "browserify2",
+        "emberTemplates",
+        "concat",
+        "cssmin"
+      ]
+    }
+  }
+}

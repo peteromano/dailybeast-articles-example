@@ -1,0 +1,9 @@
+{
+  "name": "dailybeast-articles-example",
+  "private": true,
+  "dependencies": {
+      "ember": "~1.7.0",
+      "ember-restless": "git://github.com/endlessinc/ember-restless.git",
+      "html5shiv": "~3.6.2"
+  }
+}

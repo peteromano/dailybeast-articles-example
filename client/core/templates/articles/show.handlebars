@@ -1,0 +1,53 @@
+{{#if id}}
+  {{#if isDetail}}
+    <section class="article">
+  {{/if}}
+      <section class="headline">
+        <figure class="photo">
+          {{#if isDetail}}
+              <img {{bind-attr src="photoUrl"}} />
+          {{else}}
+            {{#link-to 'article' this}}
+              <img {{bind-attr src="photoUrl"}} />
+            {{/link-to}}
+          {{/if}}
+        </figure>
+        <div class="details">
+            {{#if isDetail}}
+              <strong>{{headline}}</strong>
+            {{else}}
+              {{#link-to 'article' this}}<strong>{{headline}}</strong>{{/link-to}}
+            {{/if}}
+            <aside class="category">{{#link-to 'article.category' category}}<em>{{capitalize category}}</em>{{/link-to}}</aside>
+            <time>{{date published}}</time>
+        </div>
+      </section>
+      <div class="clear"></div>
+      <section class="description">
+        {{#if isDetail}}
+          {{parse description}}
+        {{else}}
+          {{truncate description 100}}
+        {{/if}}
+      </section>
+      <section class="tags">Tags: <em>{{tag tags}}</em></section>
+  {{#if isDetail}}
+    </section>
+  {{/if}}
+{{else}}
+    {{#if isLoaded}}
+      <section class="error">
+        <p>Article does not exist</p>
+      </section>
+    {{else}}
+        {{#if isSaving}}
+          <section class="saving">
+            <p>Saving...</p>
+          </section>
+        {{else}}
+          <section class="loading">
+            <p>Loading...</p>
+          </section>
+        {{/if}}
+    {{/if}}
+{{/if}}

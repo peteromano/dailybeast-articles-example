@@ -1,0 +1,12 @@
+<section id="main">
+  <nav>
+    <ul>
+      <li>{{#link-to 'index'}}All Articles{{/link-to}}</li>
+      <li>{{#link-to 'article.category' 'technology'}}Technology{{/link-to}}</li>
+      <li>{{#link-to 'article.category' 'politics'}}Politics{{/link-to}}</li>
+      <li>{{#link-to 'article.category' 'entertainment'}}Entertainment{{/link-to}}</li>
+      <li>{{#link-to 'article.category' 'sports'}}Sports{{/link-to}}</li>
+    </ul>
+  </nav>
+  <section id="content">{{outlet}}</section>
+</section>

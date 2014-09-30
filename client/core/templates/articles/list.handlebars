@@ -1,0 +1,36 @@
+<section id="articles">
+  {{#if category}}
+    <header>{{category}}</header>
+  {{else}}
+    <header>All Articles</header>
+  {{/if}}
+  {{#if length}}
+    {{#each article in controller itemController="article"}}
+      <section class="article">
+        {{#if article.isRemoved}}
+          <button {{action "undo" target=article}}>Undo</button>
+          Article {{#link-to "article" article.model}}<strong>{{article.headline}}</strong>{{/link-to}} has been removed from the category <em>{{capitalize article.category}}</em>
+        {{else}}
+          <button {{action "remove" article.category target=article}}>Remove from <em>{{capitalize article.category}}</em></button>
+          {{view App.ArticleView controller=article}}
+        {{/if}}
+      </section>
+    {{/each}}
+  {{else}}
+    {{#if model.isError}}
+      <section class="loading">
+        <p>Loading...</p>
+      </section>
+    {{else}}
+        {{#if model.isLoaded}}
+          <section class="error">
+            <p>Couldn't find any articles</p>
+          </section>
+        {{else}}
+          <section class="loading">
+            <p>Loading...</p>
+          </section>
+        {{/if}}
+    {{/if}}
+  {{/if}}
+</section>

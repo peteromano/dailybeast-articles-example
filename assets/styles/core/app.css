@@ -1,0 +1,78 @@
+body {
+  background: #f5f5f5;
+  font-size: 14px;
+}
+
+.clear {
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+  color: #0066bb;
+}
+
+#main {
+  width: 740px;
+  margin: 0 auto;
+}
+
+#main > nav ul {
+  margin: 0;
+  padding: 0;
+  line-height: 50px;
+}
+
+#main > nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#content {
+  margin: 10px 0;
+}
+
+#articles button {
+  float: right;
+  font-size: 12px;
+}
+
+#articles header {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.article {
+  margin: 10px 0;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 1px 1px 2px #ccc;
+}
+
+.article .headline .photo {
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+
+.article .headline .details {
+  padding: 0 10px;
+  float: left;
+}
+
+.article .headline strong {
+  font-size: 16px;
+}
+
+.article .description {
+  padding: 10px 0;
+}
+
+.article .category, .article .tags, .article time {
+  font-size: 12px;
+}
+
+#articles .article .is-clicked {
+  border: solid 1px #0066bb;
+}
